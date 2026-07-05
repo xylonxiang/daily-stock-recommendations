@@ -159,6 +159,18 @@
               <input id="strategyWeights" type="text" placeholder="例：成长30%、低位25%、风险扣分20%" required>
             </label>
             <label class="field">
+              <span>筛选条件</span>
+              <textarea id="strategyFilters" rows="3" placeholder="例：A股；当前价 ≤ 5元；三年价格分位 ≤ 35%" required></textarea>
+            </label>
+            <label class="field">
+              <span>风控约束</span>
+              <textarea id="strategyRiskRules" rows="3" placeholder="例：剔除风险评分高于70；回避连续大涨后的高波动标的" required></textarea>
+            </label>
+            <label class="field">
+              <span>适用股票池</span>
+              <input id="strategyUniverse" type="text" placeholder="例：A股科技热点池 / 5元内低价低位池" required>
+            </label>
+            <label class="field">
               <span>策略说明</span>
               <textarea id="strategyDescription" rows="4" required></textarea>
             </label>
@@ -178,7 +190,10 @@
               <tr>
                 <th>类型</th>
                 <th>策略名称</th>
+                <th>筛选条件</th>
                 <th>权重摘要</th>
+                <th>风控约束</th>
+                <th>适用股票池</th>
                 <th>说明</th>
                 <th>创建人</th>
                 <th>创建时间</th>
