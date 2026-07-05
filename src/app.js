@@ -362,6 +362,10 @@ function renderRecommendations(picks, isoDate, mode) {
             <span class="price">¥${stock.currentPrice.toFixed(2)}</span>
             <span>三年区间位置 ${stock.pricePositionPercent}%</span>
           </div>
+          <div class="data-source-line">
+            <span>最新交易日 ${stock.latestTradeDate || "待更新"}</span>
+            <span>${stock.dataSource || "本地股票池"}</span>
+          </div>
           <div class="sparkline" aria-label="${stock.name} 近三年价格曲线">
             ${renderSparkline(stock.priceHistory)}
           </div>
