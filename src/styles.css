@@ -30,6 +30,99 @@ button {
   font: inherit;
 }
 
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.auth-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(100%, 440px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 22px 0 16px;
+}
+
+.tab-button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tab-button.active {
+  border-color: var(--accent);
+  background: var(--soft-red);
+  color: var(--accent-strong);
+}
+
+.auth-form,
+.strategy-form {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  padding: 9px 10px;
+}
+
+.field input,
+.field select {
+  min-height: 40px;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.form-message {
+  min-height: 22px;
+  margin: 12px 0 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .app-header {
   display: flex;
   align-items: flex-end;
@@ -71,10 +164,20 @@ h2 {
   line-height: 1.6;
 }
 
-.mode-actions {
+.mode-actions,
+.header-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(130px, 1fr));
   gap: 10px;
+}
+
+.mode-actions {
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  margin-bottom: 16px;
+}
+
+.header-actions {
+  grid-template-columns: auto auto auto;
+  align-items: center;
   min-width: 300px;
 }
 
@@ -113,9 +216,21 @@ h2 {
   color: var(--text);
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 18px;
+  padding: 0 clamp(18px, 5vw, 56px) 18px;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
   gap: 18px;
   padding: 0 clamp(18px, 5vw, 56px) 18px;
 }
@@ -129,7 +244,8 @@ h2 {
 
 .recommendations-panel,
 .insight-panel,
-.history-panel {
+.history-panel,
+.admin-panel {
   padding: 20px;
 }
 
@@ -300,6 +416,10 @@ h2 {
   color: #60431d;
 }
 
+.notice.compact {
+  margin-top: 16px;
+}
+
 .notice p {
   margin: 6px 0 0;
   line-height: 1.6;
@@ -335,14 +455,66 @@ h2 {
   line-height: 1.7;
 }
 
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 11px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #fafbfc;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+td {
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.table-button {
+  min-height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  padding: 0 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.table-button.danger {
+  color: var(--accent);
+}
+
 @media (max-width: 980px) {
   .app-header,
-  .layout {
+  .layout,
+  .admin-layout {
     display: grid;
     grid-template-columns: 1fr;
   }
 
   .mode-actions {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .header-actions {
+    grid-template-columns: 1fr;
     min-width: 0;
     width: 100%;
   }
