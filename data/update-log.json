@@ -1,5 +1,17 @@
 ﻿[
     {
+        "updatedAt":  "2026-07-05T21:23:07",
+        "nextReferenceDate":  "2026-07-06",
+        "source":  "Eastmoney public kline API",
+        "stockCount":  16,
+        "successCount":  16,
+        "failedCount":  0,
+        "failedSymbols":  [
+
+                          ],
+        "note":  "17:00 real market data refresh completed for next-day reference."
+    },
+    {
         "updatedAt":  "2026-07-05T20:48:02",
         "nextReferenceDate":  "2026-07-06",
         "source":  "local scheduled update",
