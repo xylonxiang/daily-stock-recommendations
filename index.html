@@ -3,64 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>每日股票推荐系统</title>
+    <title>A股每日股票推荐系统</title>
     <link rel="stylesheet" href="src/styles.css">
   </head>
   <body>
     <header class="app-header">
       <div>
-        <p class="eyebrow">Daily Stock Recommendations</p>
-        <h1>每日 10 只股票推荐</h1>
+        <p class="eyebrow">China A-Share Daily Picks</p>
+        <h1>A股每日 10 只股票推荐</h1>
+        <p class="header-copy">聚焦中国 A 股，按热点科技成长与低价低位成长两类策略生成候选清单。</p>
       </div>
-      <button id="runButton" type="button" class="primary-button">生成今日推荐</button>
+      <div class="mode-actions" aria-label="推荐类型">
+        <button id="techButton" type="button" class="primary-button active">科技股推荐</button>
+        <button id="lowPriceButton" type="button" class="secondary-button">低单价股票推荐</button>
+      </div>
     </header>
 
     <main class="layout">
       <section class="panel recommendations-panel">
         <div class="section-heading">
           <div>
-            <h2>今日推荐</h2>
-            <p id="runMeta">等待运行策略</p>
+            <h2 id="modeTitle">科技股推荐</h2>
+            <p id="runMeta">AI算力、半导体、机器人、低空经济等热点科技赛道</p>
           </div>
-          <span id="strategyVersion" class="badge">strategy v1</span>
+          <span id="strategyBadge" class="badge">A股策略</span>
         </div>
         <div id="recommendations" class="recommendations empty-state">
-          <p>点击“生成今日推荐”后，将按当前策略从候选股票池里选出评分最高的 10 只。</p>
+          <p>正在读取 A 股候选股票池。</p>
         </div>
       </section>
 
-      <aside class="panel strategy-panel">
-        <div class="section-heading compact">
-          <h2>策略迭代</h2>
-          <button id="saveStrategyButton" type="button" class="ghost-button">保存策略</button>
-        </div>
-        <label class="field">
-          <span>策略名称</span>
-          <input id="strategyName" type="text">
-        </label>
-        <label class="field">
-          <span>最小成交额权重</span>
-          <input id="liquidityWeight" type="number" min="0" max="1" step="0.05">
-        </label>
-        <label class="field">
-          <span>动量权重</span>
-          <input id="momentumWeight" type="number" min="0" max="1" step="0.05">
-        </label>
-        <label class="field">
-          <span>估值权重</span>
-          <input id="valuationWeight" type="number" min="0" max="1" step="0.05">
-        </label>
-        <label class="field">
-          <span>质量权重</span>
-          <input id="qualityWeight" type="number" min="0" max="1" step="0.05">
-        </label>
-        <label class="field">
-          <span>风险扣分权重</span>
-          <input id="riskPenaltyWeight" type="number" min="0" max="1" step="0.05">
-        </label>
+      <aside class="panel insight-panel">
+        <h2>筛选逻辑</h2>
+        <div id="strategyText" class="strategy-text"></div>
         <div class="notice">
-          <strong>说明</strong>
-          <p>当前版本使用样例股票池与本地评分逻辑。后续可把 `data/stocks.json` 替换成每日行情数据，或在 `src/app.js` 中接入 API。</p>
+          <strong>数据说明</strong>
+          <p>当前为本地样例股票池，字段包含行业赛道、成长评分、风险评分、当前价格与近三年价格序列。接入真实行情后，可每日自动更新 `data/stocks.json`。</p>
         </div>
       </aside>
     </main>
