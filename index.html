@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>每日股票推荐系统</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Daily Stock Recommendations</p>
+        <h1>每日 10 只股票推荐</h1>
+      </div>
+      <button id="runButton" type="button" class="primary-button">生成今日推荐</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel recommendations-panel">
+        <div class="section-heading">
+          <div>
+            <h2>今日推荐</h2>
+            <p id="runMeta">等待运行策略</p>
+          </div>
+          <span id="strategyVersion" class="badge">strategy v1</span>
+        </div>
+        <div id="recommendations" class="recommendations empty-state">
+          <p>点击“生成今日推荐”后，将按当前策略从候选股票池里选出评分最高的 10 只。</p>
+        </div>
+      </section>
+
+      <aside class="panel strategy-panel">
+        <div class="section-heading compact">
+          <h2>策略迭代</h2>
+          <button id="saveStrategyButton" type="button" class="ghost-button">保存策略</button>
+        </div>
+        <label class="field">
+          <span>策略名称</span>
+          <input id="strategyName" type="text">
+        </label>
+        <label class="field">
+          <span>最小成交额权重</span>
+          <input id="liquidityWeight" type="number" min="0" max="1" step="0.05">
+        </label>
+        <label class="field">
+          <span>动量权重</span>
+          <input id="momentumWeight" type="number" min="0" max="1" step="0.05">
+        </label>
+        <label class="field">
+          <span>估值权重</span>
+          <input id="valuationWeight" type="number" min="0" max="1" step="0.05">
+        </label>
+        <label class="field">
+          <span>质量权重</span>
+          <input id="qualityWeight" type="number" min="0" max="1" step="0.05">
+        </label>
+        <label class="field">
+          <span>风险扣分权重</span>
+          <input id="riskPenaltyWeight" type="number" min="0" max="1" step="0.05">
+        </label>
+        <div class="notice">
+          <strong>说明</strong>
+          <p>当前版本使用样例股票池与本地评分逻辑。后续可把 `data/stocks.json` 替换成每日行情数据，或在 `src/app.js` 中接入 API。</p>
+        </div>
+      </aside>
+    </main>
+
+    <section class="panel history-panel">
+      <div class="section-heading compact">
+        <h2>历史运行</h2>
+        <button id="clearHistoryButton" type="button" class="ghost-button">清空</button>
+      </div>
+      <div id="history" class="history-list empty-state">
+        <p>暂无历史记录。</p>
+      </div>
+    </section>
+
+    <script src="src/app.js" type="module"></script>
+  </body>
+</html>
