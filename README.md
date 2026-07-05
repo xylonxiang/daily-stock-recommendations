@@ -1,0 +1,51 @@
+# 每日股票推荐系统
+
+这是一个零依赖静态 Web 项目，用于按不断迭代的选股策略，每日从候选股票池中推荐 10 只股票。
+
+## 使用方式
+
+1. 运行 `powershell -ExecutionPolicy Bypass -File scripts/serve.ps1`。
+2. 打开 `http://localhost:4173/`。
+3. 在右侧调整策略权重。
+4. 点击“保存策略”记录策略版本。
+5. 点击“生成今日推荐”得到当天 10 只股票。
+
+## 后续迭代方向
+
+- 把 `data/stocks.json` 替换为每日自动更新的行情、财务和风险数据。
+- 在 `src/app.js` 中扩展评分函数，例如加入均线、盈利预期、行业轮动和最大回撤过滤。
+- 增加后端任务，在每天固定时间生成并保存推荐结果。
+- 增加用户登录、策略版本管理和推荐结果回测。
+
+## GitHub 同步配置
+
+复制配置模板：
+
+```powershell
+Copy-Item config/github.config.example.json config/github.config.json
+```
+
+填写 `config/github.config.json`：
+
+```json
+{
+  "githubUsername": "your-github-username",
+  "githubToken": "ghp_xxx_or_fine_grained_token",
+  "repositoryUrl": "https://github.com/your-github-username/daily-stock-recommendations.git",
+  "defaultBranch": "main"
+}
+```
+
+建议使用 GitHub Personal Access Token，不要使用 GitHub 登录密码。真实配置文件 `config/github.config.json` 已加入 `.gitignore`，不会随项目提交。
+
+同步到 GitHub：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/sync-github.ps1 -Message "Initial project"
+```
+
+如果仓库是私有仓库，首次 push 时 Git 会要求认证。用户名填 GitHub 用户名，密码位置填 Personal Access Token。
+
+## 风险提示
+
+本项目当前包含的是策略系统样例和模拟数据，不构成投资建议。接入真实行情数据后，仍应加入回测、风控和人工复核流程。
