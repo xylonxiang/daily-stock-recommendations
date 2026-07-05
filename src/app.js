@@ -1,4 +1,35 @@
-const strategies = {
+const defaultUsers = [
+  {
+    username: "admin",
+    password: "admin123",
+    role: "admin",
+    status: "active",
+    createdAt: "2026-07-05T09:00:00.000Z"
+  }
+];
+
+const defaultManagedStrategies = [
+  {
+    id: "strategy-tech-core",
+    type: "tech",
+    name: "热点科技成长策略",
+    weights: "热点26%、成长24%、研发18%、风险扣分18%",
+    description: "聚焦 AI 算力、半导体、机器人、低空经济等热点科技赛道，优先选择成长和研发评分高的 A 股。",
+    createdBy: "admin",
+    createdAt: "2026-07-05T09:00:00.000Z"
+  },
+  {
+    id: "strategy-low-price-core",
+    type: "lowPrice",
+    name: "5元内低位成长策略",
+    weights: "低位30%、成长24%、质量16%、风险扣分20%",
+    description: "筛选当前价不高于 5 元，且处于近三年价格低位区间的成长修复型股票。",
+    createdBy: "admin",
+    createdAt: "2026-07-05T09:00:00.000Z"
+  }
+];
+
+const baseStrategies = {
   tech: {
     title: "科技股推荐",
     badge: "热点科技成长",
@@ -39,8 +70,26 @@ const strategies = {
   }
 };
 
+const authView = document.querySelector("#authView");
+const appView = document.querySelector("#appView");
+const adminView = document.querySelector("#adminView");
+
+const loginTab = document.querySelector("#loginTab");
+const registerTab = document.querySelector("#registerTab");
+const loginForm = document.querySelector("#loginForm");
+const registerForm = document.querySelector("#registerForm");
+const loginUsername = document.querySelector("#loginUsername");
+const loginPassword = document.querySelector("#loginPassword");
+const registerUsername = document.querySelector("#registerUsername");
+const registerPassword = document.querySelector("#registerPassword");
+const authMessage = document.querySelector("#authMessage");
+
 const techButton = document.querySelector("#techButton");
 const lowPriceButton = document.querySelector("#lowPriceButton");
+const consoleButton = document.querySelector("#consoleButton");
+const logoutButton = document.querySelector("#logoutButton");
+const adminLogoutButton = document.querySelector("#adminLogoutButton");
+const backToAppButton = document.querySelector("#backToAppButton");
 const clearHistoryButton = document.querySelector("#clearHistoryButton");
 const recommendations = document.querySelector("#recommendations");
 const historyList = document.querySelector("#history");
@@ -48,39 +97,176 @@ const runMeta = document.querySelector("#runMeta");
 const modeTitle = document.querySelector("#modeTitle");
 const strategyBadge = document.querySelector("#strategyBadge");
 const strategyText = document.querySelector("#strategyText");
+const currentUserBadge = document.querySelector("#currentUserBadge");
+
+const usersTable = document.querySelector("#usersTable");
+const userCountBadge = document.querySelector("#userCountBadge");
+const strategyForm = document.querySelector("#strategyForm");
+const strategyType = document.querySelector("#strategyType");
+const strategyName = document.querySelector("#strategyName");
+const strategyWeights = document.querySelector("#strategyWeights");
+const strategyDescription = document.querySelector("#strategyDescription");
+const strategiesTable = document.querySelector("#strategiesTable");
+const strategyCountBadge = document.querySelector("#strategyCountBadge");
 
 let stocks = [];
 let activeMode = loadJson("daily-stock-active-mode", "tech");
 let history = loadJson("daily-stock-history", []);
+let users = loadJson("daily-stock-users", defaultUsers);
+let managedStrategies = loadJson("daily-stock-managed-strategies", defaultManagedStrategies);
+let currentUser = loadJson("daily-stock-current-user", null);
 
 init();
 
 async function init() {
-  renderHistory();
+  saveJson("daily-stock-users", users);
+  saveJson("daily-stock-managed-strategies", managedStrategies);
+  bindEvents();
 
   try {
     const response = await fetch("data/stocks.json");
     stocks = await response.json();
-    runRecommendation(activeMode);
   } catch (error) {
     recommendations.className = "recommendations empty-state";
     recommendations.innerHTML = "<p>无法读取 A 股股票池数据。请通过本地服务器打开项目，或检查 data/stocks.json。</p>";
   }
+
+  if (currentUser) {
+    showApp();
+    runRecommendation(activeMode);
+  } else {
+    showAuth();
+  }
 }
 
-techButton.addEventListener("click", () => runRecommendation("tech"));
-lowPriceButton.addEventListener("click", () => runRecommendation("lowPrice"));
+function bindEvents() {
+  loginTab.addEventListener("click", () => setAuthMode("login"));
+  registerTab.addEventListener("click", () => setAuthMode("register"));
+  loginForm.addEventListener("submit", handleLogin);
+  registerForm.addEventListener("submit", handleRegister);
+  techButton.addEventListener("click", () => runRecommendation("tech"));
+  lowPriceButton.addEventListener("click", () => runRecommendation("lowPrice"));
+  consoleButton.addEventListener("click", showAdmin);
+  logoutButton.addEventListener("click", logout);
+  adminLogoutButton.addEventListener("click", logout);
+  backToAppButton.addEventListener("click", showApp);
+  strategyForm.addEventListener("submit", handleStrategyCreate);
 
-clearHistoryButton.addEventListener("click", () => {
-  history = [];
-  saveJson("daily-stock-history", history);
+  clearHistoryButton.addEventListener("click", () => {
+    history = [];
+    saveJson("daily-stock-history", history);
+    renderHistory();
+  });
+}
+
+function setAuthMode(mode) {
+  const isLogin = mode === "login";
+  loginTab.classList.toggle("active", isLogin);
+  registerTab.classList.toggle("active", !isLogin);
+  loginForm.classList.toggle("hidden", !isLogin);
+  registerForm.classList.toggle("hidden", isLogin);
+  authMessage.textContent = "";
+}
+
+function handleLogin(event) {
+  event.preventDefault();
+  const username = loginUsername.value.trim();
+  const password = loginPassword.value;
+  const user = users.find((item) => item.username === username && item.password === password);
+
+  if (!user) {
+    authMessage.textContent = "用户名或密码错误。";
+    return;
+  }
+
+  if (user.status !== "active") {
+    authMessage.textContent = "账号已被禁用，请联系管理员。";
+    return;
+  }
+
+  currentUser = publicUser(user);
+  saveJson("daily-stock-current-user", currentUser);
+  showApp();
+  runRecommendation(activeMode);
+}
+
+function handleRegister(event) {
+  event.preventDefault();
+  const username = registerUsername.value.trim();
+  const password = registerPassword.value;
+
+  if (username.length < 3 || password.length < 6) {
+    authMessage.textContent = "用户名至少 3 位，密码至少 6 位。";
+    return;
+  }
+
+  if (users.some((user) => user.username === username)) {
+    authMessage.textContent = "用户名已存在。";
+    return;
+  }
+
+  const user = {
+    username,
+    password,
+    role: "user",
+    status: "active",
+    createdAt: new Date().toISOString()
+  };
+  users = [...users, user];
+  saveJson("daily-stock-users", users);
+  currentUser = publicUser(user);
+  saveJson("daily-stock-current-user", currentUser);
+  showApp();
+  runRecommendation(activeMode);
+}
+
+function logout() {
+  currentUser = null;
+  localStorage.removeItem("daily-stock-current-user");
+  showAuth();
+}
+
+function showAuth() {
+  authView.classList.remove("hidden");
+  appView.classList.add("hidden");
+  adminView.classList.add("hidden");
+}
+
+function showApp() {
+  if (!currentUser) {
+    showAuth();
+    return;
+  }
+
+  authView.classList.add("hidden");
+  appView.classList.remove("hidden");
+  adminView.classList.add("hidden");
+  currentUserBadge.textContent = `${currentUser.username} · ${roleText(currentUser.role)}`;
+  consoleButton.disabled = currentUser.role !== "admin";
+  consoleButton.title = currentUser.role === "admin" ? "进入后台管理" : "仅管理员可进入控制台";
   renderHistory();
-});
+}
+
+function showAdmin() {
+  if (!currentUser || currentUser.role !== "admin") {
+    return;
+  }
+
+  authView.classList.add("hidden");
+  appView.classList.add("hidden");
+  adminView.classList.remove("hidden");
+  renderUsersTable();
+  renderStrategiesTable();
+}
 
 function runRecommendation(mode) {
+  if (!stocks.length) {
+    return;
+  }
+
   activeMode = mode;
   saveJson("daily-stock-active-mode", activeMode);
-  const strategy = strategies[mode];
+  const strategy = baseStrategies[mode];
   const picks = recommendStocks(stocks, strategy, 10);
   const run = {
     date: new Date().toISOString(),
@@ -108,12 +294,18 @@ function recommendStocks(stockPool, strategy, limit) {
 }
 
 function renderMode(strategy, mode) {
+  const customStrategies = managedStrategies.filter((item) => item.type === mode);
   modeTitle.textContent = strategy.title;
   runMeta.textContent = strategy.meta;
-  strategyBadge.textContent = strategy.badge;
+  strategyBadge.textContent = `${strategy.badge} · ${customStrategies.length}条策略`;
   techButton.classList.toggle("active", mode === "tech");
   lowPriceButton.classList.toggle("active", mode === "lowPrice");
-  strategyText.innerHTML = strategy.description.map((item) => `<p>${item}</p>`).join("");
+  strategyText.innerHTML = [
+    ...strategy.description,
+    ...customStrategies.map((item) => `${item.name}：${item.description}`)
+  ]
+    .map((item) => `<p>${item}</p>`)
+    .join("");
 }
 
 function renderRecommendations(picks, isoDate, mode) {
@@ -123,7 +315,7 @@ function renderRecommendations(picks, isoDate, mode) {
     return;
   }
 
-  runMeta.textContent = `${formatDate(isoDate)} · ${strategies[mode].meta}`;
+  runMeta.textContent = `${formatDate(isoDate)} · ${baseStrategies[mode].meta}`;
   recommendations.className = "recommendations";
   recommendations.innerHTML = picks
     .map(
@@ -205,9 +397,116 @@ function renderHistory() {
     .join("");
 }
 
+function renderUsersTable() {
+  userCountBadge.textContent = `${users.length}人`;
+  usersTable.innerHTML = users
+    .map(
+      (user) => `
+        <tr>
+          <td>${user.username}</td>
+          <td>${roleText(user.role)}</td>
+          <td>${user.status === "active" ? "启用" : "禁用"}</td>
+          <td>${formatDate(user.createdAt)}</td>
+          <td>
+            <button class="table-button" data-user-action="toggle-status" data-username="${user.username}" ${user.username === "admin" ? "disabled" : ""}>
+              ${user.status === "active" ? "禁用" : "启用"}
+            </button>
+          </td>
+        </tr>
+      `
+    )
+    .join("");
+
+  usersTable.querySelectorAll("[data-user-action='toggle-status']").forEach((button) => {
+    button.addEventListener("click", () => toggleUserStatus(button.dataset.username));
+  });
+}
+
+function renderStrategiesTable() {
+  strategyCountBadge.textContent = `${managedStrategies.length}条`;
+  strategiesTable.innerHTML = managedStrategies
+    .map(
+      (strategy) => `
+        <tr>
+          <td>${baseStrategies[strategy.type]?.title || strategy.type}</td>
+          <td>${strategy.name}</td>
+          <td>${strategy.weights}</td>
+          <td>${strategy.description}</td>
+          <td>${strategy.createdBy}</td>
+          <td>${formatDate(strategy.createdAt)}</td>
+          <td>
+            <button class="table-button danger" data-strategy-id="${strategy.id}">删除</button>
+          </td>
+        </tr>
+      `
+    )
+    .join("");
+
+  strategiesTable.querySelectorAll("[data-strategy-id]").forEach((button) => {
+    button.addEventListener("click", () => deleteStrategy(button.dataset.strategyId));
+  });
+}
+
+function handleStrategyCreate(event) {
+  event.preventDefault();
+  const strategy = {
+    id: `strategy-${Date.now()}`,
+    type: strategyType.value,
+    name: strategyName.value.trim(),
+    weights: strategyWeights.value.trim(),
+    description: strategyDescription.value.trim(),
+    createdBy: currentUser.username,
+    createdAt: new Date().toISOString()
+  };
+
+  managedStrategies = [strategy, ...managedStrategies];
+  saveJson("daily-stock-managed-strategies", managedStrategies);
+  strategyForm.reset();
+  renderStrategiesTable();
+  renderMode(baseStrategies[activeMode], activeMode);
+}
+
+function toggleUserStatus(username) {
+  users = users.map((user) => {
+    if (user.username !== username) {
+      return user;
+    }
+
+    return {
+      ...user,
+      status: user.status === "active" ? "disabled" : "active"
+    };
+  });
+  saveJson("daily-stock-users", users);
+  renderUsersTable();
+}
+
+function deleteStrategy(strategyId) {
+  managedStrategies = managedStrategies.filter((strategy) => strategy.id !== strategyId);
+  saveJson("daily-stock-managed-strategies", managedStrategies);
+  renderStrategiesTable();
+  renderMode(baseStrategies[activeMode], activeMode);
+}
+
+function publicUser(user) {
+  return {
+    username: user.username,
+    role: user.role,
+    status: user.status
+  };
+}
+
+function roleText(role) {
+  return role === "admin" ? "管理员" : "普通用户";
+}
+
 function loadJson(key, fallback) {
   try {
-    return JSON.parse(localStorage.getItem(key)) || fallback;
+    const rawValue = localStorage.getItem(key);
+    if (!rawValue) {
+      return fallback;
+    }
+    return JSON.parse(rawValue);
   } catch {
     return fallback;
   }
