@@ -14,6 +14,28 @@
 - 科技股推荐：聚焦 AI 算力、半导体、机器人、低空经济、AI 应用等热点科技赛道，综合热点、成长、研发、质量、流动性和风险评分。
 - 低单价股票推荐：只筛选当前价格不高于 5 元、近三年价格区间位置不高于 35% 的股票，并展示近三年价格曲线。
 
+## 账号与后台
+
+- 普通用户需要注册后登录才能查看推荐页面。
+- 默认管理员账号：`admin`，默认密码：`admin123`。
+- 管理员登录后点击“控制台”，可管理用户状态，并维护不同选股类型的策略表格。
+
+## 每天 17 点数据更新
+
+手动执行一次数据更新：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-data.ps1
+```
+
+注册 Windows 每日 17:00 定时任务：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/register-daily-update.ps1
+```
+
+定时任务会更新 `data/stocks.json` 中的价格、三年价格区间位置和低位评分，并把最近更新记录写入 `data/update-log.json`。
+
 ## 后续迭代方向
 
 - 把 `data/stocks.json` 替换为每日自动更新的 A 股行情、财务和风险数据。
