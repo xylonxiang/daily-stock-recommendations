@@ -1,0 +1,18 @@
+[
+  {"symbol":"AAPL","name":"Apple","market":"NASDAQ","industry":"消费电子","liquidityScore":94,"momentumScore":82,"valuationScore":62,"qualityScore":91,"riskScore":36,"reason":"现金流稳健，成交活跃，适合作为大盘科技核心候选。"},
+  {"symbol":"MSFT","name":"Microsoft","market":"NASDAQ","industry":"软件服务","liquidityScore":95,"momentumScore":86,"valuationScore":59,"qualityScore":94,"riskScore":32,"reason":"盈利质量高，云与软件业务具备较强防御性。"},
+  {"symbol":"NVDA","name":"NVIDIA","market":"NASDAQ","industry":"半导体","liquidityScore":96,"momentumScore":94,"valuationScore":45,"qualityScore":88,"riskScore":55,"reason":"动量强，但估值与波动风险需要策略约束。"},
+  {"symbol":"GOOGL","name":"Alphabet","market":"NASDAQ","industry":"互联网服务","liquidityScore":91,"momentumScore":78,"valuationScore":68,"qualityScore":86,"riskScore":34,"reason":"估值相对均衡，广告与云业务提供多元收益来源。"},
+  {"symbol":"AMZN","name":"Amazon","market":"NASDAQ","industry":"电商云计算","liquidityScore":93,"momentumScore":81,"valuationScore":56,"qualityScore":82,"riskScore":42,"reason":"云业务和零售效率改善带来成长弹性。"},
+  {"symbol":"META","name":"Meta Platforms","market":"NASDAQ","industry":"社交媒体","liquidityScore":90,"momentumScore":85,"valuationScore":66,"qualityScore":84,"riskScore":43,"reason":"利润率改善明显，回购与现金流形成支撑。"},
+  {"symbol":"AVGO","name":"Broadcom","market":"NASDAQ","industry":"半导体","liquidityScore":87,"momentumScore":88,"valuationScore":54,"qualityScore":87,"riskScore":45,"reason":"AI 与基础设施需求支撑增长，波动中等偏高。"},
+  {"symbol":"LLY","name":"Eli Lilly","market":"NYSE","industry":"医药","liquidityScore":82,"momentumScore":87,"valuationScore":42,"qualityScore":90,"riskScore":47,"reason":"产品管线强，成长确定性较高但估值不低。"},
+  {"symbol":"JPM","name":"JPMorgan Chase","market":"NYSE","industry":"金融","liquidityScore":88,"momentumScore":73,"valuationScore":78,"qualityScore":83,"riskScore":38,"reason":"大型银行资产质量较稳，估值与分红具备吸引力。"},
+  {"symbol":"V","name":"Visa","market":"NYSE","industry":"支付网络","liquidityScore":84,"momentumScore":76,"valuationScore":63,"qualityScore":92,"riskScore":29,"reason":"商业模式轻资产，盈利质量和护城河突出。"},
+  {"symbol":"COST","name":"Costco","market":"NASDAQ","industry":"零售","liquidityScore":79,"momentumScore":80,"valuationScore":50,"qualityScore":88,"riskScore":31,"reason":"会员制零售稳定，抗周期属性较强。"},
+  {"symbol":"UNH","name":"UnitedHealth","market":"NYSE","industry":"医疗保险","liquidityScore":81,"momentumScore":62,"valuationScore":70,"qualityScore":82,"riskScore":44,"reason":"业务规模优势明显，短期政策与利润率风险需关注。"},
+  {"symbol":"XOM","name":"Exxon Mobil","market":"NYSE","industry":"能源","liquidityScore":86,"momentumScore":67,"valuationScore":76,"qualityScore":75,"riskScore":41,"reason":"现金流与股东回报较稳，受油价周期影响。"},
+  {"symbol":"CRM","name":"Salesforce","market":"NYSE","industry":"企业软件","liquidityScore":78,"momentumScore":74,"valuationScore":65,"qualityScore":80,"riskScore":39,"reason":"利润率提升叠加企业软件需求，综合评分均衡。"},
+  {"symbol":"AMD","name":"AMD","market":"NASDAQ","industry":"半导体","liquidityScore":89,"momentumScore":83,"valuationScore":48,"qualityScore":76,"riskScore":58,"reason":"成长弹性高，竞争与估值波动较大。"},
+  {"symbol":"TSM","name":"Taiwan Semiconductor","market":"NYSE","industry":"晶圆代工","liquidityScore":85,"momentumScore":84,"valuationScore":61,"qualityScore":89,"riskScore":46,"reason":"先进制程领先，AI 需求提供中长期支撑。"}
+]
