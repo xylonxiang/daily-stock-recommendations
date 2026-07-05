@@ -1,0 +1,6 @@
+{
+  "githubUsername": "your-github-username",
+  "githubToken": "ghp_xxx_or_fine_grained_token",
+  "repositoryUrl": "https://github.com/your-github-username/daily-stock-recommendations.git",
+  "defaultBranch": "main"
+}
