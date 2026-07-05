@@ -1,0 +1,16 @@
+﻿[
+    {
+        "updatedAt":  "2026-07-05T20:48:02",
+        "nextReferenceDate":  "2026-07-06",
+        "source":  "local scheduled update",
+        "stockCount":  16,
+        "note":  "17:00 data refresh completed for next-day reference."
+    },
+    {
+        "updatedAt":  "2026-07-05T20:47:17",
+        "nextReferenceDate":  "2026-07-06",
+        "source":  "local scheduled update",
+        "stockCount":  16,
+        "note":  "17:00 data refresh completed for next-day reference."
+    }
+]
