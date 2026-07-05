@@ -7,50 +7,188 @@
     <link rel="stylesheet" href="src/styles.css">
   </head>
   <body>
-    <header class="app-header">
-      <div>
+    <section id="authView" class="auth-shell">
+      <div class="auth-card">
         <p class="eyebrow">China A-Share Daily Picks</p>
-        <h1>A股每日 10 只股票推荐</h1>
-        <p class="header-copy">聚焦中国 A 股，按热点科技成长与低价低位成长两类策略生成候选清单。</p>
-      </div>
-      <div class="mode-actions" aria-label="推荐类型">
-        <button id="techButton" type="button" class="primary-button active">科技股推荐</button>
-        <button id="lowPriceButton" type="button" class="secondary-button">低单价股票推荐</button>
-      </div>
-    </header>
+        <h1>A股每日股票推荐</h1>
+        <p class="header-copy">注册账号后登录使用。管理员可进入控制台管理用户和选股策略。</p>
 
-    <main class="layout">
-      <section class="panel recommendations-panel">
-        <div class="section-heading">
-          <div>
-            <h2 id="modeTitle">科技股推荐</h2>
-            <p id="runMeta">AI算力、半导体、机器人、低空经济等热点科技赛道</p>
-          </div>
-          <span id="strategyBadge" class="badge">A股策略</span>
+        <div class="auth-tabs" role="tablist" aria-label="账号入口">
+          <button id="loginTab" type="button" class="tab-button active">登录</button>
+          <button id="registerTab" type="button" class="tab-button">注册</button>
         </div>
-        <div id="recommendations" class="recommendations empty-state">
-          <p>正在读取 A 股候选股票池。</p>
+
+        <form id="loginForm" class="auth-form">
+          <label class="field">
+            <span>用户名</span>
+            <input id="loginUsername" type="text" autocomplete="username" required>
+          </label>
+          <label class="field">
+            <span>密码</span>
+            <input id="loginPassword" type="password" autocomplete="current-password" required>
+          </label>
+          <button type="submit" class="primary-button full-width">登录</button>
+        </form>
+
+        <form id="registerForm" class="auth-form hidden">
+          <label class="field">
+            <span>用户名</span>
+            <input id="registerUsername" type="text" autocomplete="username" required>
+          </label>
+          <label class="field">
+            <span>密码</span>
+            <input id="registerPassword" type="password" autocomplete="new-password" required>
+          </label>
+          <button type="submit" class="primary-button full-width">注册并登录</button>
+        </form>
+
+        <p id="authMessage" class="form-message"></p>
+        <div class="notice compact">
+          <strong>默认管理员</strong>
+          <p>用户名 `admin`，密码 `admin123`。上线前请替换为真实后端认证。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="appView" class="hidden">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">China A-Share Daily Picks</p>
+          <h1>A股每日 10 只股票推荐</h1>
+          <p class="header-copy">聚焦中国 A 股，按热点科技成长与低价低位两类策略生成候选清单。</p>
+        </div>
+        <div class="header-actions">
+          <span id="currentUserBadge" class="badge">未登录</span>
+          <button id="consoleButton" type="button" class="secondary-button">控制台</button>
+          <button id="logoutButton" type="button" class="ghost-button">退出</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel recommendations-panel">
+          <div class="section-heading">
+            <div>
+              <h2 id="modeTitle">科技股推荐</h2>
+              <p id="runMeta">AI算力、半导体、机器人、低空经济等热点科技赛道</p>
+            </div>
+            <span id="strategyBadge" class="badge">A股策略</span>
+          </div>
+          <div class="mode-actions" aria-label="推荐类型">
+            <button id="techButton" type="button" class="primary-button active">科技股推荐</button>
+            <button id="lowPriceButton" type="button" class="secondary-button">低单价股票推荐</button>
+          </div>
+          <div id="recommendations" class="recommendations empty-state">
+            <p>正在读取 A 股候选股票池。</p>
+          </div>
+        </section>
+
+        <aside class="panel insight-panel">
+          <h2>筛选逻辑</h2>
+          <div id="strategyText" class="strategy-text"></div>
+          <div class="notice">
+            <strong>数据说明</strong>
+            <p>当前为本地样例股票池。可通过每天 17 点任务更新 `data/stocks.json`，为第二天理财决策提供参考。</p>
+          </div>
+        </aside>
+      </main>
+
+      <section class="panel history-panel">
+        <div class="section-heading compact">
+          <h2>历史运行</h2>
+          <button id="clearHistoryButton" type="button" class="ghost-button">清空</button>
+        </div>
+        <div id="history" class="history-list empty-state">
+          <p>暂无历史记录。</p>
         </div>
       </section>
+    </section>
 
-      <aside class="panel insight-panel">
-        <h2>筛选逻辑</h2>
-        <div id="strategyText" class="strategy-text"></div>
-        <div class="notice">
-          <strong>数据说明</strong>
-          <p>当前为本地样例股票池，字段包含行业赛道、成长评分、风险评分、当前价格与近三年价格序列。接入真实行情后，可每日自动更新 `data/stocks.json`。</p>
+    <section id="adminView" class="hidden">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Admin Console</p>
+          <h1>后台管理系统</h1>
+          <p class="header-copy">管理注册用户，并为不同选股类型维护可迭代的选股策略。</p>
         </div>
-      </aside>
-    </main>
+        <div class="header-actions">
+          <button id="backToAppButton" type="button" class="secondary-button">返回推荐页</button>
+          <button id="adminLogoutButton" type="button" class="ghost-button">退出</button>
+        </div>
+      </header>
 
-    <section class="panel history-panel">
-      <div class="section-heading compact">
-        <h2>历史运行</h2>
-        <button id="clearHistoryButton" type="button" class="ghost-button">清空</button>
-      </div>
-      <div id="history" class="history-list empty-state">
-        <p>暂无历史记录。</p>
-      </div>
+      <main class="admin-layout">
+        <section class="panel admin-panel">
+          <div class="section-heading compact">
+            <h2>用户管理</h2>
+            <span id="userCountBadge" class="badge">0人</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>用户名</th>
+                  <th>角色</th>
+                  <th>状态</th>
+                  <th>注册时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="usersTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel admin-panel">
+          <div class="section-heading compact">
+            <h2>新增选股策略</h2>
+          </div>
+          <form id="strategyForm" class="strategy-form">
+            <label class="field">
+              <span>选股类型</span>
+              <select id="strategyType" required>
+                <option value="tech">科技股推荐</option>
+                <option value="lowPrice">低单价股票推荐</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>策略名称</span>
+              <input id="strategyName" type="text" required>
+            </label>
+            <label class="field">
+              <span>权重摘要</span>
+              <input id="strategyWeights" type="text" placeholder="例：成长30%、低位25%、风险扣分20%" required>
+            </label>
+            <label class="field">
+              <span>策略说明</span>
+              <textarea id="strategyDescription" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="primary-button">添加策略</button>
+          </form>
+        </section>
+      </main>
+
+      <section class="panel history-panel">
+        <div class="section-heading compact">
+          <h2>已存在的选股策略</h2>
+          <span id="strategyCountBadge" class="badge">0条</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>类型</th>
+                <th>策略名称</th>
+                <th>权重摘要</th>
+                <th>说明</th>
+                <th>创建人</th>
+                <th>创建时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="strategiesTable"></tbody>
+          </table>
+        </div>
+      </section>
     </section>
 
     <script src="src/app.js" type="module"></script>
