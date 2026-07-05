@@ -325,6 +325,15 @@ button:disabled {
   font-size: 13px;
 }
 
+.data-source-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .price {
   color: var(--ink);
   font-size: 22px;
