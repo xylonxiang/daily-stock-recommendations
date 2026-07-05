@@ -7,15 +7,15 @@
         "industry":  "半导体",
         "track":  "国产半导体",
         "isTechHotspot":  true,
-        "currentPrice":  72.84,
-        "pricePositionPercent":  89,
+        "currentPrice":  140.31,
+        "pricePositionPercent":  84,
         "hotspotScore":  96,
         "growthScore":  84,
         "researchScore":  91,
         "qualityScore":  82,
         "liquidityScore":  94,
         "valuationScore":  58,
-        "priceLowScore":  11,
+        "priceLowScore":  16,
         "turnaroundScore":  62,
         "riskScore":  52,
         "tags":  [
@@ -26,55 +26,60 @@
         "reason":  "国产晶圆制造核心标的，受益于半导体自主可控和 AI 算力产业链扩容。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  44.8
+                                 "date":  "2023-05-08",
+                                 "close":  59.43
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  46.9
+                                 "date":  "2023-08-15",
+                                 "close":  47.52
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  53.6
+                                 "date":  "2023-11-28",
+                                 "close":  54.55
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  58.2
+                                 "date":  "2024-03-13",
+                                 "close":  47.85
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  63.7
+                                 "date":  "2024-06-26",
+                                 "close":  46.47
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  69.5
+                                 "date":  "2024-10-10",
+                                 "close":  75.02
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  76.2
+                                 "date":  "2025-01-16",
+                                 "close":  96.6
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  68.9
+                                 "date":  "2025-05-07",
+                                 "close":  90.5
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  71.8
+                                 "date":  "2025-08-13",
+                                 "close":  88.66
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  72.4
+                                 "date":  "2025-12-04",
+                                 "close":  114.73
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  72.62
+                                 "date":  "2026-03-23",
+                                 "close":  98.04
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  72.84
+                                 "date":  "2026-07-03",
+                                 "close":  140.31
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -2.63,
+        "latestTurnoverPercent":  3.85,
+        "latestAmount":  11011795924,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -85,15 +90,15 @@
         "industry":  "AI芯片",
         "track":  "AI算力",
         "isTechHotspot":  true,
-        "currentPrice":  432.96,
-        "pricePositionPercent":  93,
+        "currentPrice":  1353,
+        "pricePositionPercent":  84,
         "hotspotScore":  98,
         "growthScore":  92,
         "researchScore":  96,
         "qualityScore":  73,
         "liquidityScore":  88,
         "valuationScore":  35,
-        "priceLowScore":  7,
+        "priceLowScore":  16,
         "turnaroundScore":  74,
         "riskScore":  68,
         "tags":  [
@@ -104,55 +109,60 @@
         "reason":  "国产 AI 芯片关注度高，成长弹性强，但估值和波动风险也更高。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  188.3
+                                 "date":  "2023-05-16",
+                                 "close":  122.83
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  162.8
+                                 "date":  "2023-08-23",
+                                 "close":  99.76
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  236.5
+                                 "date":  "2023-12-06",
+                                 "close":  104.7
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  288.9
+                                 "date":  "2024-03-21",
+                                 "close":  119.94
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  335.2
+                                 "date":  "2024-07-04",
+                                 "close":  128.83
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  391.8
+                                 "date":  "2024-10-18",
+                                 "close":  287.39
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  452.6
+                                 "date":  "2025-01-24",
+                                 "close":  410.39
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  384.4
+                                 "date":  "2025-05-15",
+                                 "close":  453.36
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  406.1
+                                 "date":  "2025-08-21",
+                                 "close":  694.3
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  418.6
+                                 "date":  "2025-12-04",
+                                 "close":  917.79
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  425.72
+                                 "date":  "2026-03-23",
+                                 "close":  650.87
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  432.96
+                                 "date":  "2026-07-03",
+                                 "close":  1353
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -1.38,
+        "latestTurnoverPercent":  1.62,
+        "latestAmount":  14021878020,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -163,15 +173,15 @@
         "industry":  "光模块",
         "track":  "AI算力",
         "isTechHotspot":  true,
-        "currentPrice":  146.79,
-        "pricePositionPercent":  68,
+        "currentPrice":  1116,
+        "pricePositionPercent":  80,
         "hotspotScore":  97,
         "growthScore":  91,
         "researchScore":  82,
         "qualityScore":  88,
         "liquidityScore":  92,
         "valuationScore":  52,
-        "priceLowScore":  32,
+        "priceLowScore":  20,
         "turnaroundScore":  68,
         "riskScore":  48,
         "tags":  [
@@ -182,55 +192,60 @@
         "reason":  "AI 数据中心带动高速光模块需求，业绩成长与行业景气度匹配度较高。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  91.6
+                                 "date":  "2023-05-16",
+                                 "close":  52.83
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  103.2
+                                 "date":  "2023-08-23",
+                                 "close":  83.28
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  112.7
+                                 "date":  "2023-12-06",
+                                 "close":  70.12
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  126.1
+                                 "date":  "2024-03-21",
+                                 "close":  118.26
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  139.4
+                                 "date":  "2024-07-04",
+                                 "close":  141.11
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  158.7
+                                 "date":  "2024-10-18",
+                                 "close":  166.1
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  172.6
+                                 "date":  "2025-01-24",
+                                 "close":  126.35
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  146.3
+                                 "date":  "2025-05-15",
+                                 "close":  92.22
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  155.9
+                                 "date":  "2025-08-21",
+                                 "close":  263.82
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  151.3
+                                 "date":  "2025-12-04",
+                                 "close":  534.5
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  149.03
+                                 "date":  "2026-03-23",
+                                 "close":  598.62
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  146.79
+                                 "date":  "2026-07-03",
+                                 "close":  1116
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -2.36,
+        "latestTurnoverPercent":  2.96,
+        "latestAmount":  37702362948.77,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -241,15 +256,15 @@
         "industry":  "人工智能",
         "track":  "AI应用",
         "isTechHotspot":  true,
-        "currentPrice":  48.76,
-        "pricePositionPercent":  53,
+        "currentPrice":  41.51,
+        "pricePositionPercent":  18,
         "hotspotScore":  92,
         "growthScore":  78,
         "researchScore":  89,
         "qualityScore":  76,
         "liquidityScore":  89,
         "valuationScore":  55,
-        "priceLowScore":  47,
+        "priceLowScore":  82,
         "turnaroundScore":  70,
         "riskScore":  46,
         "tags":  [
@@ -260,55 +275,60 @@
         "reason":  "AI 应用落地场景丰富，适合作为科技应用侧的成长观察标的。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  48.6
+                                 "date":  "2023-05-16",
+                                 "close":  58.82
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  43.2
+                                 "date":  "2023-08-23",
+                                 "close":  53.97
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  39.8
+                                 "date":  "2023-12-06",
+                                 "close":  45.18
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  45.7
+                                 "date":  "2024-03-21",
+                                 "close":  52.03
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  51.4
+                                 "date":  "2024-07-04",
+                                 "close":  40.91
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  56.8
+                                 "date":  "2024-10-18",
+                                 "close":  45.73
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  53.2
+                                 "date":  "2025-01-24",
+                                 "close":  49.72
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  46.1
+                                 "date":  "2025-05-15",
+                                 "close":  46.9
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  44.9
+                                 "date":  "2025-08-21",
+                                 "close":  50.98
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  47.8
+                                 "date":  "2025-12-04",
+                                 "close":  48.63
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  48.28
+                                 "date":  "2026-03-23",
+                                 "close":  46.45
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  48.76
+                                 "date":  "2026-07-03",
+                                 "close":  41.51
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  1.05,
+        "latestTurnoverPercent":  2.46,
+        "latestAmount":  2218691088.7,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -319,15 +339,15 @@
         "industry":  "工业自动化",
         "track":  "机器人",
         "isTechHotspot":  true,
-        "currentPrice":  66.73,
-        "pricePositionPercent":  66,
+        "currentPrice":  72.15,
+        "pricePositionPercent":  67,
         "hotspotScore":  90,
         "growthScore":  82,
         "researchScore":  84,
         "qualityScore":  91,
         "liquidityScore":  86,
         "valuationScore":  61,
-        "priceLowScore":  34,
+        "priceLowScore":  33,
         "turnaroundScore":  66,
         "riskScore":  35,
         "tags":  [
@@ -338,55 +358,60 @@
         "reason":  "工业控制和机器人产业链核心公司，质量评分较高，波动风险相对可控。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  58.8
+                                 "date":  "2023-05-16",
+                                 "close":  56.17
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  55.6
+                                 "date":  "2023-08-23",
+                                 "close":  65.29
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  52.1
+                                 "date":  "2023-12-06",
+                                 "close":  58.69
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  59.3
+                                 "date":  "2024-03-21",
+                                 "close":  59.93
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  64.7
+                                 "date":  "2024-07-04",
+                                 "close":  50.16
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  71.6
+                                 "date":  "2024-10-18",
+                                 "close":  57.59
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  74.2
+                                 "date":  "2025-01-24",
+                                 "close":  62.22
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  68.4
+                                 "date":  "2025-05-15",
+                                 "close":  67.58
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  63.9
+                                 "date":  "2025-08-21",
+                                 "close":  67.8
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  66.2
+                                 "date":  "2025-12-04",
+                                 "close":  72.15
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  66.46
+                                 "date":  "2026-03-23",
+                                 "close":  64.83
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  66.73
+                                 "date":  "2026-07-03",
+                                 "close":  72.15
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  5.48,
+        "latestTurnoverPercent":  4.03,
+        "latestAmount":  6938271736.56,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -397,15 +422,15 @@
         "industry":  "动力电池",
         "track":  "新能源科技",
         "isTechHotspot":  true,
-        "currentPrice":  223.05,
-        "pricePositionPercent":  69,
+        "currentPrice":  380,
+        "pricePositionPercent":  76,
         "hotspotScore":  86,
         "growthScore":  79,
         "researchScore":  87,
         "qualityScore":  90,
         "liquidityScore":  95,
         "valuationScore":  63,
-        "priceLowScore":  31,
+        "priceLowScore":  24,
         "turnaroundScore":  60,
         "riskScore":  38,
         "tags":  [
@@ -416,55 +441,60 @@
         "reason":  "新能源科技龙头，储能与出海仍有成长空间，估值较前期高点已有消化。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  164.2
+                                 "date":  "2023-05-16",
+                                 "close":  220.3
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  178.5
+                                 "date":  "2023-08-23",
+                                 "close":  208.8
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  194.6
+                                 "date":  "2023-12-06",
+                                 "close":  144.18
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  211.7
+                                 "date":  "2024-03-21",
+                                 "close":  170.38
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  238.2
+                                 "date":  "2024-07-04",
+                                 "close":  165.93
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  248.9
+                                 "date":  "2024-10-18",
+                                 "close":  236.22
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  226.4
+                                 "date":  "2025-01-24",
+                                 "close":  248.18
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  203.5
+                                 "date":  "2025-05-15",
+                                 "close":  252.27
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  209.8
+                                 "date":  "2025-08-21",
+                                 "close":  272.09
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  216.5
+                                 "date":  "2025-12-04",
+                                 "close":  376.44
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  219.75
+                                 "date":  "2026-03-23",
+                                 "close":  395.08
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  223.05
+                                 "date":  "2026-07-03",
+                                 "close":  380
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -0.61,
+        "latestTurnoverPercent":  0.61,
+        "latestAmount":  9910832542.24,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -475,15 +505,15 @@
         "industry":  "智能物联",
         "track":  "AI应用",
         "isTechHotspot":  true,
-        "currentPrice":  32.81,
-        "pricePositionPercent":  52,
+        "currentPrice":  34,
+        "pricePositionPercent":  87,
         "hotspotScore":  82,
         "growthScore":  70,
         "researchScore":  78,
         "qualityScore":  86,
         "liquidityScore":  90,
         "valuationScore":  72,
-        "priceLowScore":  48,
+        "priceLowScore":  13,
         "turnaroundScore":  66,
         "riskScore":  34,
         "tags":  [
@@ -494,55 +524,60 @@
         "reason":  "智能物联龙头，价格处于三年偏低区间，兼具科技属性与修复弹性。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
+                                 "date":  "2023-05-16",
+                                 "close":  32
+                             },
+                             {
+                                 "date":  "2023-08-23",
+                                 "close":  31.43
+                             },
+                             {
+                                 "date":  "2023-12-06",
+                                 "close":  30.85
+                             },
+                             {
+                                 "date":  "2024-03-21",
+                                 "close":  30.61
+                             },
+                             {
+                                 "date":  "2024-07-04",
+                                 "close":  27.9
+                             },
+                             {
+                                 "date":  "2024-10-18",
+                                 "close":  27.02
+                             },
+                             {
+                                 "date":  "2025-01-24",
+                                 "close":  27.17
+                             },
+                             {
+                                 "date":  "2025-05-15",
+                                 "close":  26.94
+                             },
+                             {
+                                 "date":  "2025-08-21",
+                                 "close":  29.18
+                             },
+                             {
+                                 "date":  "2025-12-04",
                                  "close":  29.6
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  28.2
+                                 "date":  "2026-03-23",
+                                 "close":  29.26
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  27.4
-                             },
-                             {
-                                 "date":  "2024Q4",
-                                 "close":  30.1
-                             },
-                             {
-                                 "date":  "2025Q1",
-                                 "close":  34.5
-                             },
-                             {
-                                 "date":  "2025Q2",
-                                 "close":  37.9
-                             },
-                             {
-                                 "date":  "2025Q3",
-                                 "close":  35.2
-                             },
-                             {
-                                 "date":  "2025Q4",
-                                 "close":  30.8
-                             },
-                             {
-                                 "date":  "2026Q1",
-                                 "close":  29.7
-                             },
-                             {
-                                 "date":  "2026Q2",
-                                 "close":  31.6
-                             },
-                             {
-                                 "date":  "2026-07-05",
-                                 "close":  32.2
-                             },
-                             {
-                                 "date":  "2026-07-05",
-                                 "close":  32.81
+                                 "date":  "2026-07-03",
+                                 "close":  34
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  1.16,
+        "latestTurnoverPercent":  1.03,
+        "latestAmount":  3189522227.42,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -553,15 +588,15 @@
         "industry":  "云计算设备",
         "track":  "AI算力",
         "isTechHotspot":  true,
-        "currentPrice":  28.42,
-        "pricePositionPercent":  49,
+        "currentPrice":  30.28,
+        "pricePositionPercent":  72,
         "hotspotScore":  88,
         "growthScore":  74,
         "researchScore":  76,
         "qualityScore":  78,
         "liquidityScore":  84,
         "valuationScore":  68,
-        "priceLowScore":  51,
+        "priceLowScore":  28,
         "turnaroundScore":  63,
         "riskScore":  39,
         "tags":  [
@@ -572,55 +607,60 @@
         "reason":  "AI 基础设施带动服务器与网络设备需求，估值和价格位置相对均衡。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  24.6
+                                 "date":  "2023-05-16",
+                                 "close":  26.64
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  25.1
+                                 "date":  "2023-08-23",
+                                 "close":  25.02
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  22.7
+                                 "date":  "2023-12-06",
+                                 "close":  19.34
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  26.8
+                                 "date":  "2024-03-21",
+                                 "close":  22.83
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  30.3
+                                 "date":  "2024-07-04",
+                                 "close":  21.31
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  34.4
+                                 "date":  "2024-10-18",
+                                 "close":  24.38
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  32.6
+                                 "date":  "2025-01-24",
+                                 "close":  26.68
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  27.2
+                                 "date":  "2025-05-15",
+                                 "close":  24.46
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  26.4
+                                 "date":  "2025-08-21",
+                                 "close":  27.19
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  28.7
+                                 "date":  "2025-12-04",
+                                 "close":  24.91
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  28.56
+                                 "date":  "2026-03-23",
+                                 "close":  25.34
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  28.42
+                                 "date":  "2026-07-03",
+                                 "close":  30.28
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  4.31,
+        "latestTurnoverPercent":  8.61,
+        "latestAmount":  7584138424.93,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -631,15 +671,15 @@
         "industry":  "智能家电",
         "track":  "AI终端",
         "isTechHotspot":  true,
-        "currentPrice":  4.84,
-        "pricePositionPercent":  50,
+        "currentPrice":  6.85,
+        "pricePositionPercent":  25,
         "hotspotScore":  76,
         "growthScore":  68,
         "researchScore":  55,
         "qualityScore":  62,
         "liquidityScore":  82,
         "valuationScore":  74,
-        "priceLowScore":  50,
+        "priceLowScore":  75,
         "turnaroundScore":  72,
         "riskScore":  49,
         "tags":  [
@@ -650,55 +690,60 @@
         "reason":  "股价低于 5 元且处于三年较低区间，智能终端业务带来主题弹性。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  4.4
+                                 "date":  "2023-05-16",
+                                 "close":  3.89
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  3.9
+                                 "date":  "2023-08-23",
+                                 "close":  3.78
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  3.6
+                                 "date":  "2023-12-06",
+                                 "close":  5.44
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  4.2
+                                 "date":  "2024-03-21",
+                                 "close":  5.86
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  5.4
+                                 "date":  "2024-07-04",
+                                 "close":  4.24
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  6.1
+                                 "date":  "2024-10-18",
+                                 "close":  8.06
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  5.6
+                                 "date":  "2025-01-24",
+                                 "close":  8.94
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  4.7
+                                 "date":  "2025-05-15",
+                                 "close":  10.48
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  4.35
+                                 "date":  "2025-08-21",
+                                 "close":  11.58
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  4.82
+                                 "date":  "2025-12-04",
+                                 "close":  9.21
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.83
+                                 "date":  "2026-03-23",
+                                 "close":  8.49
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.84
+                                 "date":  "2026-07-03",
+                                 "close":  6.85
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -1.44,
+        "latestTurnoverPercent":  1.67,
+        "latestAmount":  529452202,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -709,15 +754,15 @@
         "industry":  "显示面板",
         "track":  "半导体显示",
         "isTechHotspot":  true,
-        "currentPrice":  4.25,
-        "pricePositionPercent":  59,
+        "currentPrice":  5.65,
+        "pricePositionPercent":  84,
         "hotspotScore":  78,
         "growthScore":  70,
         "researchScore":  64,
         "qualityScore":  66,
         "liquidityScore":  88,
         "valuationScore":  76,
-        "priceLowScore":  41,
+        "priceLowScore":  16,
         "turnaroundScore":  73,
         "riskScore":  44,
         "tags":  [
@@ -728,55 +773,60 @@
         "reason":  "面板周期有修复预期，当前价格低于 5 元并处于近三年低位区域。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  3.8
+                                 "date":  "2023-05-16",
+                                 "close":  3.42
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  3.6
+                                 "date":  "2023-08-23",
+                                 "close":  3.59
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  3.35
+                                 "date":  "2023-12-06",
+                                 "close":  3.9
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  3.72
+                                 "date":  "2024-03-21",
+                                 "close":  4.34
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  4.28
+                                 "date":  "2024-07-04",
+                                 "close":  4.08
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  4.88
+                                 "date":  "2024-10-18",
+                                 "close":  4
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  4.64
+                                 "date":  "2025-01-24",
+                                 "close":  4.9
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  3.96
-                             },
-                             {
-                                 "date":  "2026Q1",
-                                 "close":  3.78
-                             },
-                             {
-                                 "date":  "2026Q2",
+                                 "date":  "2025-05-15",
                                  "close":  4.15
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.2
+                                 "date":  "2025-08-21",
+                                 "close":  4.52
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.25
+                                 "date":  "2025-12-04",
+                                 "close":  4.27
+                             },
+                             {
+                                 "date":  "2026-03-23",
+                                 "close":  4.11
+                             },
+                             {
+                                 "date":  "2026-07-03",
+                                 "close":  5.65
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -4.56,
+        "latestTurnoverPercent":  8.69,
+        "latestAmount":  9419970192.07,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -787,15 +837,15 @@
         "industry":  "通信运营",
         "track":  "云网算力",
         "isTechHotspot":  true,
-        "currentPrice":  4.93,
-        "pricePositionPercent":  51,
+        "currentPrice":  4.07,
+        "pricePositionPercent":  16,
         "hotspotScore":  74,
         "growthScore":  64,
         "researchScore":  52,
         "qualityScore":  74,
         "liquidityScore":  91,
         "valuationScore":  79,
-        "priceLowScore":  49,
+        "priceLowScore":  84,
         "turnaroundScore":  62,
         "riskScore":  31,
         "tags":  [
@@ -806,55 +856,60 @@
         "reason":  "算力网络和云业务提供科技属性，股价低于 5 元且流动性较好。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  4.58
+                                 "date":  "2023-05-16",
+                                 "close":  4.61
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  4.37
+                                 "date":  "2023-08-23",
+                                 "close":  4.97
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  4.21
+                                 "date":  "2023-12-06",
+                                 "close":  3.84
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  4.66
+                                 "date":  "2024-03-21",
+                                 "close":  4.35
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  5.18
+                                 "date":  "2024-07-04",
+                                 "close":  4.35
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  5.62
+                                 "date":  "2024-10-18",
+                                 "close":  4.85
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  5.37
+                                 "date":  "2025-01-24",
+                                 "close":  4.64
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  4.84
+                                 "date":  "2025-05-15",
+                                 "close":  5.21
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  4.72
+                                 "date":  "2025-08-21",
+                                 "close":  5.5
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  4.93
+                                 "date":  "2025-12-04",
+                                 "close":  5.31
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.93
+                                 "date":  "2026-03-23",
+                                 "close":  4.42
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.93
+                                 "date":  "2026-07-03",
+                                 "close":  4.07
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  0.25,
+        "latestTurnoverPercent":  0.37,
+        "latestAmount":  467451890,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -865,15 +920,15 @@
         "industry":  "高端装备",
         "track":  "军工装备",
         "isTechHotspot":  false,
-        "currentPrice":  4.68,
-        "pricePositionPercent":  53,
+        "currentPrice":  5.1,
+        "pricePositionPercent":  74,
         "hotspotScore":  58,
         "growthScore":  63,
         "researchScore":  50,
         "qualityScore":  61,
         "liquidityScore":  86,
         "valuationScore":  73,
-        "priceLowScore":  47,
+        "priceLowScore":  26,
         "turnaroundScore":  76,
         "riskScore":  46,
         "tags":  [
@@ -884,55 +939,60 @@
         "reason":  "低价且处于三年较低分位，装备制造景气修复带来潜在弹性。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  4.34
+                                 "date":  "2022-06-14",
+                                 "close":  3.62
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  4.08
+                                 "date":  "2022-09-20",
+                                 "close":  3.59
                              },
                              {
-                                 "date":  "2024Q3",
+                                 "date":  "2023-01-03",
+                                 "close":  3.49
+                             },
+                             {
+                                 "date":  "2023-04-18",
                                  "close":  3.92
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  4.26
+                                 "date":  "2023-07-31",
+                                 "close":  4.78
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  4.88
+                                 "date":  "2023-11-13",
+                                 "close":  3.94
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  5.36
+                                 "date":  "2024-02-27",
+                                 "close":  4.48
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  5.18
+                                 "date":  "2024-06-11",
+                                 "close":  4.82
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  4.56
+                                 "date":  "2024-10-09",
+                                 "close":  5.26
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  4.42
+                                 "date":  "2025-01-15",
+                                 "close":  4.41
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  4.74
+                                 "date":  "2025-05-06",
+                                 "close":  4.2
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  4.71
-                             },
-                             {
-                                 "date":  "2026-07-05",
-                                 "close":  4.68
+                                 "date":  "2025-08-12",
+                                 "close":  5.1
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2025-08-12",
+        "latestChangePercent":  1.8,
+        "latestTurnoverPercent":  2.56,
+        "latestAmount":  2941450109,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -943,15 +1003,15 @@
         "industry":  "稀土钢铁",
         "track":  "新材料",
         "isTechHotspot":  false,
-        "currentPrice":  1.98,
-        "pricePositionPercent":  50,
+        "currentPrice":  2.25,
+        "pricePositionPercent":  45,
         "hotspotScore":  55,
         "growthScore":  58,
         "researchScore":  42,
         "qualityScore":  49,
         "liquidityScore":  90,
         "valuationScore":  68,
-        "priceLowScore":  50,
+        "priceLowScore":  55,
         "turnaroundScore":  70,
         "riskScore":  58,
         "tags":  [
@@ -962,55 +1022,60 @@
         "reason":  "价格低且处于三年低位，但周期属性和盈利波动较大，需控制仓位。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  1.82
+                                 "date":  "2023-05-16",
+                                 "close":  1.84
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  1.67
+                                 "date":  "2023-08-23",
+                                 "close":  1.78
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  1.58
+                                 "date":  "2023-12-06",
+                                 "close":  1.54
                              },
                              {
-                                 "date":  "2024Q4",
-                                 "close":  1.71
+                                 "date":  "2024-03-21",
+                                 "close":  1.63
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  2.04
+                                 "date":  "2024-07-04",
+                                 "close":  1.41
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  2.38
+                                 "date":  "2024-10-18",
+                                 "close":  1.63
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  2.26
+                                 "date":  "2025-01-24",
+                                 "close":  1.8
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  1.88
+                                 "date":  "2025-05-15",
+                                 "close":  1.81
                              },
                              {
-                                 "date":  "2026Q1",
-                                 "close":  1.76
+                                 "date":  "2025-08-21",
+                                 "close":  2.68
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  1.92
+                                 "date":  "2025-12-04",
+                                 "close":  2.42
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  1.95
+                                 "date":  "2026-03-23",
+                                 "close":  2.47
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  1.98
+                                 "date":  "2026-07-03",
+                                 "close":  2.25
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  1.35,
+        "latestTurnoverPercent":  1.86,
+        "latestAmount":  1300725047,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -1021,15 +1086,15 @@
         "industry":  "港口物流",
         "track":  "低价修复",
         "isTechHotspot":  false,
-        "currentPrice":  1.6,
-        "pricePositionPercent":  29,
+        "currentPrice":  1.4,
+        "pricePositionPercent":  31,
         "hotspotScore":  32,
         "growthScore":  52,
         "researchScore":  28,
         "qualityScore":  58,
         "liquidityScore":  75,
         "valuationScore":  71,
-        "priceLowScore":  71,
+        "priceLowScore":  69,
         "turnaroundScore":  66,
         "riskScore":  50,
         "tags":  [
@@ -1040,55 +1105,60 @@
         "reason":  "低价低位特征明显，适合纳入低价修复池观察，科技属性较弱。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  1.61
+                                 "date":  "2023-05-16",
+                                 "close":  1.57
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  1.52
-                             },
-                             {
-                                 "date":  "2024Q3",
-                                 "close":  1.46
-                             },
-                             {
-                                 "date":  "2024Q4",
-                                 "close":  1.58
-                             },
-                             {
-                                 "date":  "2025Q1",
-                                 "close":  1.78
-                             },
-                             {
-                                 "date":  "2025Q2",
-                                 "close":  1.95
-                             },
-                             {
-                                 "date":  "2025Q3",
-                                 "close":  1.84
-                             },
-                             {
-                                 "date":  "2025Q4",
-                                 "close":  1.62
-                             },
-                             {
-                                 "date":  "2026Q1",
+                                 "date":  "2023-08-23",
                                  "close":  1.55
                              },
                              {
-                                 "date":  "2026Q2",
-                                 "close":  1.64
+                                 "date":  "2023-12-06",
+                                 "close":  1.45
                              },
                              {
-                                 "date":  "2026-07-05",
+                                 "date":  "2024-03-21",
+                                 "close":  1.39
+                             },
+                             {
+                                 "date":  "2024-07-04",
+                                 "close":  1.23
+                             },
+                             {
+                                 "date":  "2024-10-18",
+                                 "close":  1.43
+                             },
+                             {
+                                 "date":  "2025-01-24",
+                                 "close":  1.55
+                             },
+                             {
+                                 "date":  "2025-05-15",
+                                 "close":  1.5
+                             },
+                             {
+                                 "date":  "2025-08-21",
                                  "close":  1.62
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  1.6
+                                 "date":  "2025-12-04",
+                                 "close":  1.62
+                             },
+                             {
+                                 "date":  "2026-03-23",
+                                 "close":  1.62
+                             },
+                             {
+                                 "date":  "2026-07-03",
+                                 "close":  1.4
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  0.72,
+        "latestTurnoverPercent":  0.5,
+        "latestAmount":  129969695,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -1099,15 +1169,15 @@
         "industry":  "显示面板",
         "track":  "半导体显示",
         "isTechHotspot":  true,
-        "currentPrice":  4.36,
-        "pricePositionPercent":  70,
+        "currentPrice":  8.38,
+        "pricePositionPercent":  87,
         "hotspotScore":  73,
         "growthScore":  66,
         "researchScore":  62,
         "qualityScore":  65,
         "liquidityScore":  92,
         "valuationScore":  75,
-        "priceLowScore":  30,
+        "priceLowScore":  13,
         "turnaroundScore":  69,
         "riskScore":  43,
         "tags":  [
@@ -1118,55 +1188,60 @@
         "reason":  "当前股价低于 5 元，显示面板周期修复和高流动性提供观察价值。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
+                                 "date":  "2023-05-16",
+                                 "close":  3.77
+                             },
+                             {
+                                 "date":  "2023-08-23",
+                                 "close":  3.68
+                             },
+                             {
+                                 "date":  "2023-12-06",
                                  "close":  3.72
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  3.54
+                                 "date":  "2024-03-21",
+                                 "close":  3.86
                              },
                              {
-                                 "date":  "2024Q3",
-                                 "close":  3.42
+                                 "date":  "2024-07-04",
+                                 "close":  3.98
                              },
                              {
-                                 "date":  "2024Q4",
+                                 "date":  "2024-10-18",
+                                 "close":  4.05
+                             },
+                             {
+                                 "date":  "2025-01-24",
+                                 "close":  4.37
+                             },
+                             {
+                                 "date":  "2025-05-15",
                                  "close":  3.78
                              },
                              {
-                                 "date":  "2025Q1",
-                                 "close":  4.22
+                                 "date":  "2025-08-21",
+                                 "close":  3.98
                              },
                              {
-                                 "date":  "2025Q2",
-                                 "close":  4.76
+                                 "date":  "2025-12-04",
+                                 "close":  3.99
                              },
                              {
-                                 "date":  "2025Q3",
-                                 "close":  4.58
+                                 "date":  "2026-03-23",
+                                 "close":  3.81
                              },
                              {
-                                 "date":  "2025Q4",
-                                 "close":  4.08
-                             },
-                             {
-                                 "date":  "2026Q1",
-                                 "close":  4.02
-                             },
-                             {
-                                 "date":  "2026Q2",
-                                 "close":  4.36
-                             },
-                             {
-                                 "date":  "2026-07-05",
-                                 "close":  4.36
-                             },
-                             {
-                                 "date":  "2026-07-05",
-                                 "close":  4.36
+                                 "date":  "2026-07-03",
+                                 "close":  8.38
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  -7.91,
+        "latestTurnoverPercent":  11.72,
+        "latestAmount":  35597368805.43,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     },
     {
@@ -1177,15 +1252,15 @@
         "industry":  "能源",
         "track":  "低价修复",
         "isTechHotspot":  false,
-        "currentPrice":  1.44,
-        "pricePositionPercent":  25,
+        "currentPrice":  1.57,
+        "pricePositionPercent":  54,
         "hotspotScore":  28,
         "growthScore":  50,
         "researchScore":  22,
         "qualityScore":  47,
         "liquidityScore":  83,
         "valuationScore":  64,
-        "priceLowScore":  75,
+        "priceLowScore":  46,
         "turnaroundScore":  68,
         "riskScore":  62,
         "tags":  [
@@ -1196,55 +1271,60 @@
         "reason":  "价格处于三年低位，但基本面和周期波动风险较高，适合低价池末位观察。",
         "priceHistory":  [
                              {
-                                 "date":  "2024Q1",
-                                 "close":  1.44
+                                 "date":  "2023-04-27",
+                                 "close":  1.51
                              },
                              {
-                                 "date":  "2024Q2",
-                                 "close":  1.36
-                             },
-                             {
-                                 "date":  "2024Q3",
-                                 "close":  1.31
-                             },
-                             {
-                                 "date":  "2024Q4",
-                                 "close":  1.39
-                             },
-                             {
-                                 "date":  "2025Q1",
-                                 "close":  1.61
-                             },
-                             {
-                                 "date":  "2025Q2",
-                                 "close":  1.82
-                             },
-                             {
-                                 "date":  "2025Q3",
-                                 "close":  1.74
-                             },
-                             {
-                                 "date":  "2025Q4",
-                                 "close":  1.49
-                             },
-                             {
-                                 "date":  "2026Q1",
-                                 "close":  1.41
-                             },
-                             {
-                                 "date":  "2026Q2",
+                                 "date":  "2023-08-09",
                                  "close":  1.48
                              },
                              {
-                                 "date":  "2026-07-05",
+                                 "date":  "2023-11-22",
+                                 "close":  1.36
+                             },
+                             {
+                                 "date":  "2024-03-07",
+                                 "close":  1.35
+                             },
+                             {
+                                 "date":  "2024-06-20",
+                                 "close":  1.18
+                             },
+                             {
+                                 "date":  "2024-10-18",
+                                 "close":  1.26
+                             },
+                             {
+                                 "date":  "2025-01-24",
+                                 "close":  1.56
+                             },
+                             {
+                                 "date":  "2025-05-15",
+                                 "close":  1.36
+                             },
+                             {
+                                 "date":  "2025-08-21",
                                  "close":  1.46
                              },
                              {
-                                 "date":  "2026-07-05",
-                                 "close":  1.44
+                                 "date":  "2025-12-04",
+                                 "close":  1.61
+                             },
+                             {
+                                 "date":  "2026-03-23",
+                                 "close":  1.85
+                             },
+                             {
+                                 "date":  "2026-07-03",
+                                 "close":  1.57
                              }
                          ],
-        "lastUpdatedAt":  "2026-07-05T20:48:02",
+        "latestTradeDate":  "2026-07-03",
+        "latestChangePercent":  0,
+        "latestTurnoverPercent":  1.61,
+        "latestAmount":  552587415,
+        "dataSource":  "Eastmoney public kline API",
+        "lastUpdatedAt":  "2026-07-05T21:23:07",
         "nextReferenceDate":  "2026-07-06"
     }
 ]
