@@ -35,7 +35,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-data.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/register-daily-update.ps1
 ```
 
-定时任务会更新 `data/stocks.json` 中的价格、三年价格区间位置和低位评分，并把最近更新记录写入 `data/update-log.json`。
+定时任务会通过东方财富公开行情接口更新 `data/stocks.json` 中的价格、近三年价格曲线、三年价格区间位置和低位评分，并把最近更新记录写入 `data/update-log.json`。
+
+当前数据源：
+
+- 日 K 线：东方财富公开接口 `https://push2his.eastmoney.com/api/qt/stock/kline/get`
+- 接口特点：免费、无需 token，适合本地工具和原型项目；它不是带 SLA 的商业授权 API，生产环境建议替换为 Tushare Pro、聚宽、Wind、Choice 等稳定数据服务。
 
 ## 后续迭代方向
 
