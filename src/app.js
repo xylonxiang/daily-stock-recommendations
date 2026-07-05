@@ -100,6 +100,10 @@ const clearHistoryButton = document.querySelector("#clearHistoryButton");
 const recommendations = document.querySelector("#recommendations");
 const historyList = document.querySelector("#history");
 const historyPanel = document.querySelector("#historyPanel");
+const historyPagination = document.querySelector("#historyPagination");
+const historyPrevButton = document.querySelector("#historyPrevButton");
+const historyNextButton = document.querySelector("#historyNextButton");
+const historyPageInfo = document.querySelector("#historyPageInfo");
 const runMeta = document.querySelector("#runMeta");
 const modeTitle = document.querySelector("#modeTitle");
 const strategyBadge = document.querySelector("#strategyBadge");
@@ -122,6 +126,7 @@ const strategyCountBadge = document.querySelector("#strategyCountBadge");
 let stocks = [];
 let activeMode = loadJson("daily-stock-active-mode", "tech");
 let history = loadJson("daily-stock-history", []);
+let historyPage = 1;
 let users = loadJson("daily-stock-users", defaultUsers);
 let managedStrategies = loadJson("daily-stock-managed-strategies", defaultManagedStrategies);
 let currentUser = loadJson("daily-stock-current-user", null);
@@ -166,7 +171,16 @@ function bindEvents() {
 
   clearHistoryButton.addEventListener("click", () => {
     history = [];
+    historyPage = 1;
     saveJson("daily-stock-history", history);
+    renderHistory();
+  });
+  historyPrevButton.addEventListener("click", () => {
+    historyPage = Math.max(1, historyPage - 1);
+    renderHistory();
+  });
+  historyNextButton.addEventListener("click", () => {
+    historyPage = Math.min(getHistoryTotalPages(), historyPage + 1);
     renderHistory();
   });
 }
@@ -291,6 +305,7 @@ function runRecommendation(mode) {
   };
 
   history = [run, ...history].slice(0, 20);
+  historyPage = 1;
   saveJson("daily-stock-history", history);
   renderMode(strategy, mode);
   renderRecommendations(picks, run.date, mode);
@@ -393,11 +408,18 @@ function renderHistory() {
   if (!history.length) {
     historyList.className = "history-list empty-state";
     historyList.innerHTML = "<p>暂无历史记录。</p>";
+    historyPagination.classList.add("hidden");
     return;
   }
 
+  const totalPages = getHistoryTotalPages();
+  historyPage = Math.min(Math.max(1, historyPage), totalPages);
+  const pageSize = 10;
+  const startIndex = (historyPage - 1) * pageSize;
+  const visibleHistory = history.slice(startIndex, startIndex + pageSize);
+
   historyList.className = "history-list";
-  historyList.innerHTML = history
+  historyList.innerHTML = visibleHistory
     .map(
       (run) => `
         <div class="history-item">
@@ -410,6 +432,15 @@ function renderHistory() {
       `
     )
     .join("");
+
+  historyPagination.classList.toggle("hidden", totalPages <= 1);
+  historyPageInfo.textContent = `第 ${historyPage} / ${totalPages} 页`;
+  historyPrevButton.disabled = historyPage <= 1;
+  historyNextButton.disabled = historyPage >= totalPages;
+}
+
+function getHistoryTotalPages() {
+  return Math.max(1, Math.ceil(history.length / 10));
 }
 
 function renderUsersTable() {
