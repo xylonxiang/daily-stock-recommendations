@@ -93,6 +93,7 @@ const backToAppButton = document.querySelector("#backToAppButton");
 const clearHistoryButton = document.querySelector("#clearHistoryButton");
 const recommendations = document.querySelector("#recommendations");
 const historyList = document.querySelector("#history");
+const historyPanel = document.querySelector("#historyPanel");
 const runMeta = document.querySelector("#runMeta");
 const modeTitle = document.querySelector("#modeTitle");
 const strategyBadge = document.querySelector("#strategyBadge");
@@ -244,7 +245,10 @@ function showApp() {
   currentUserBadge.textContent = `${currentUser.username} · ${roleText(currentUser.role)}`;
   consoleButton.disabled = currentUser.role !== "admin";
   consoleButton.title = currentUser.role === "admin" ? "进入后台管理" : "仅管理员可进入控制台";
-  renderHistory();
+  historyPanel.classList.toggle("hidden", currentUser.role !== "admin");
+  if (currentUser.role === "admin") {
+    renderHistory();
+  }
 }
 
 function showAdmin() {
