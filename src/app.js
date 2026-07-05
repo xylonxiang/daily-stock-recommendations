@@ -14,6 +14,9 @@ const defaultManagedStrategies = [
     type: "tech",
     name: "热点科技成长策略",
     weights: "热点26%、成长24%、研发18%、风险扣分18%",
+    filters: "A股；科技热点赛道；isTechHotspot=true；流动性评分优先",
+    riskRules: "扣除估值压力、短期涨幅过热和经营风险；风险评分越高扣分越多",
+    universe: "A股科技热点池：AI算力、半导体、机器人、低空经济、AI应用",
     description: "聚焦 AI 算力、半导体、机器人、低空经济等热点科技赛道，优先选择成长和研发评分高的 A 股。",
     createdBy: "admin",
     createdAt: "2026-07-05T09:00:00.000Z"
@@ -23,6 +26,9 @@ const defaultManagedStrategies = [
     type: "lowPrice",
     name: "5元内低位成长策略",
     weights: "低位30%、成长24%、质量16%、风险扣分20%",
+    filters: "A股；当前价格≤5元；近三年价格区间位置≤35%；必须存在三年价格曲线",
+    riskRules: "低价不等于低风险；扣除经营风险、周期波动和流动性不足风险",
+    universe: "5元内低价低位池：低价、低位、具备成长或修复潜力的A股",
     description: "筛选当前价不高于 5 元，且处于近三年价格低位区间的成长修复型股票。",
     createdBy: "admin",
     createdAt: "2026-07-05T09:00:00.000Z"
@@ -106,6 +112,9 @@ const strategyForm = document.querySelector("#strategyForm");
 const strategyType = document.querySelector("#strategyType");
 const strategyName = document.querySelector("#strategyName");
 const strategyWeights = document.querySelector("#strategyWeights");
+const strategyFilters = document.querySelector("#strategyFilters");
+const strategyRiskRules = document.querySelector("#strategyRiskRules");
+const strategyUniverse = document.querySelector("#strategyUniverse");
 const strategyDescription = document.querySelector("#strategyDescription");
 const strategiesTable = document.querySelector("#strategiesTable");
 const strategyCountBadge = document.querySelector("#strategyCountBadge");
@@ -116,6 +125,8 @@ let history = loadJson("daily-stock-history", []);
 let users = loadJson("daily-stock-users", defaultUsers);
 let managedStrategies = loadJson("daily-stock-managed-strategies", defaultManagedStrategies);
 let currentUser = loadJson("daily-stock-current-user", null);
+
+managedStrategies = normalizeManagedStrategies(managedStrategies);
 
 init();
 
@@ -434,8 +445,11 @@ function renderStrategiesTable() {
         <tr>
           <td>${baseStrategies[strategy.type]?.title || strategy.type}</td>
           <td>${strategy.name}</td>
-          <td>${strategy.weights}</td>
-          <td>${strategy.description}</td>
+          <td><div class="logic-cell">${strategy.filters}</div></td>
+          <td><div class="logic-cell strong">${strategy.weights}</div></td>
+          <td><div class="logic-cell">${strategy.riskRules}</div></td>
+          <td><div class="logic-cell">${strategy.universe}</div></td>
+          <td><div class="logic-cell">${strategy.description}</div></td>
           <td>${strategy.createdBy}</td>
           <td>${formatDate(strategy.createdAt)}</td>
           <td>
@@ -458,6 +472,9 @@ function handleStrategyCreate(event) {
     type: strategyType.value,
     name: strategyName.value.trim(),
     weights: strategyWeights.value.trim(),
+    filters: strategyFilters.value.trim(),
+    riskRules: strategyRiskRules.value.trim(),
+    universe: strategyUniverse.value.trim(),
     description: strategyDescription.value.trim(),
     createdBy: currentUser.username,
     createdAt: new Date().toISOString()
@@ -498,6 +515,19 @@ function publicUser(user) {
     role: user.role,
     status: user.status
   };
+}
+
+function normalizeManagedStrategies(strategies) {
+  return strategies.map((strategy) => {
+    const fallback = defaultManagedStrategies.find((item) => item.type === strategy.type) || defaultManagedStrategies[0];
+
+    return {
+      ...strategy,
+      filters: strategy.filters || fallback.filters,
+      riskRules: strategy.riskRules || fallback.riskRules,
+      universe: strategy.universe || fallback.universe
+    };
+  });
 }
 
 function roleText(role) {
